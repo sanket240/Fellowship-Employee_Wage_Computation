@@ -2,12 +2,13 @@ import random
 
 
 class EmployeeWageBuilder:
-    def __init__(self, wage_rate_per_hour, no_of_working_days, max_hrs_in_month, emp_hrs=0, emp_wage=0, total_emp_wage=0, total_working_days=0,total_working_hours=0):
+    def __init__(self, company_name, wage_rate_per_hour, no_of_working_days, max_hrs_in_month, emp_hrs=0, emp_wage=0, total_emp_wage=0, total_working_days=0,total_working_hours=0):
         self.emp_hrs = emp_hrs
         self.emp_wage = emp_wage
         self.total_emp_wage = total_emp_wage
         self.total_working_days = total_working_days
         self.total_working_hours = total_working_hours
+        self.COMPANY_NAME = company_name
         self.WAGE_RATE_PER_HOUR = wage_rate_per_hour
         self.NO_WORKING_DAYS = no_of_working_days
         self.MAX_HRS_IN_MONTH = max_hrs_in_month
@@ -27,6 +28,9 @@ class EmployeeWageBuilder:
             1: 8, 2: 4, 3: 0
         }
         return switcher.get(value, "hi")
+
+    def __str__(self):
+        return f"{self.COMPANY_NAME, self.total_emp_wage}"
 
 
 
