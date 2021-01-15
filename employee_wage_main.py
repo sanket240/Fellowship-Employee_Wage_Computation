@@ -1,7 +1,8 @@
 from employee_wage_builder import EmployeeWageBuilder
 if __name__ == '__main__':
     emp_wage_list = []
-    no_of_companies = int(input("Enter number od companies:"))
+    emp_obj = []
+    no_of_companies = int(input("Enter number of companies:"))
     for i in range(0, no_of_companies):
         company_name = input("Enter Company Name:")
         wage_rate = int(input("Enter Wage rate:"))

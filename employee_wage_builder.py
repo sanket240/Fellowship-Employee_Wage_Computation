@@ -1,7 +1,8 @@
 import random
+from employee_wage_interface import EmpWageMethods
 
 
-class EmployeeWageBuilder:
+class EmployeeWageBuilder(EmpWageMethods):
     def __init__(self, company_name, wage_rate_per_hour, no_of_working_days, max_hrs_in_month, emp_hrs=0, emp_wage=0,
                  total_emp_wage=0, total_working_days=0, total_working_hours=0):
         self.emp_hrs = emp_hrs
