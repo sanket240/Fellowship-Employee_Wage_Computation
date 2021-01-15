@@ -13,3 +13,7 @@ class EmpWageMethods(abc.ABC):
     @abc.abstractmethod
     def print_list(self, list_emp_wage):
         pass
+
+    @abc.abstractmethod
+    def get_total_wages(self, list_emp_wage):
+        pass

@@ -11,5 +11,6 @@ if __name__ == '__main__':
         emp_obj = EmployeeWageBuilder(company_name, wage_rate, no_of_working_days, max_hrs)
         emp_obj.total_employee_wage()
         emp_wage_list.append(emp_obj)
-    emp_obj.print_list(emp_wage_list)
+    #emp_obj.print_list(emp_wage_list)
+    emp_obj.get_total_wages(emp_wage_list)
 

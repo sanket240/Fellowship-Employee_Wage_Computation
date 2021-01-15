@@ -41,5 +41,12 @@ class EmployeeWageBuilder(EmpWageMethods):
         for per in list_emp_wage:
             print(per)
 
+    def get_total_wages(self, emp_wage_list):
+        self.print_list(emp_wage_list)
+        company_name = input("Enter Name of company to get total wages")
+        for j in range(0, len(emp_wage_list)):
+            if emp_wage_list[j].COMPANY_NAME == company_name:
+                print(emp_wage_list[j].COMPANY_NAME, emp_wage_list[j].total_emp_wage)
+
     def __str__(self):
         return f"{self.COMPANY_NAME, self.emp_wage, self.total_emp_wage}"
