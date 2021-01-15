@@ -1,8 +1,14 @@
 from employee_wage_builder import EmployeeWageBuilder
 if __name__ == '__main__':
-    tata = EmployeeWageBuilder("Tata", 20, 20, 100)
-    tata.total_employee_wage()
-    print(tata)
-    reliance = EmployeeWageBuilder("Reliance", 30, 30, 180)
-    reliance.total_employee_wage()
-    print(reliance)
+    emp_wage_list = []
+    no_of_companies = int(input("Enter number od companies:"))
+    for i in range(0, no_of_companies):
+        company_name = input("Enter Company Name:")
+        wage_rate = int(input("Enter Wage rate:"))
+        no_of_working_days = int(input("Enter number of working days: "))
+        max_hrs = int(input("Enter Max hours:"))
+        emp_obj = EmployeeWageBuilder(company_name, wage_rate, no_of_working_days, max_hrs)
+        emp_obj.total_employee_wage()
+        emp_wage_list.append(emp_obj)
+    emp_obj.print_list(emp_wage_list)
+
