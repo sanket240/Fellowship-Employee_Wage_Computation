@@ -1,6 +1,8 @@
 import random
 from employee_wage_interface import EmpWageMethods
 
+wage_list = []
+
 
 class EmployeeWageBuilder(EmpWageMethods):
     def __init__(self, company_name, wage_rate_per_hour, no_of_working_days, max_hrs_in_month, emp_hrs=0, emp_wage=0,
@@ -23,6 +25,9 @@ class EmployeeWageBuilder(EmpWageMethods):
             self.total_working_hours = self.total_working_hours + self.emp_hrs
             self.emp_wage = self.emp_hrs * self.WAGE_RATE_PER_HOUR
             self.total_emp_wage = self.total_emp_wage + self.emp_wage
+            list_vales = f"{self.COMPANY_NAME, self.emp_wage, self.total_emp_wage}"
+        wage_list.append(list_vales)
+        print(wage_list)
         print("Total Conditional Wage:", self.total_emp_wage)
 
     def get_work_hours(self, value):
